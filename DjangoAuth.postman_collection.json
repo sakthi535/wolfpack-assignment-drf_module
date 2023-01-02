@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "c05bdb79-2535-4fb4-a497-a9e2979c942a",
+		"name": "DjangoAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25139580"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"IamTrueGigaChad@saiyans.com\",\r\n    \"name\" : \"Blast\",\r\n    \"password\" : \"Strength\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/registration/?ACCEPT=application/json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registration",
+						""
+					],
+					"query": [
+						{
+							"key": "ACCEPT",
+							"value": "application/json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"IamTrueGigaChad@saiyans.com\",\r\n    \"password\" : \"Strength\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyNjg1NDAyLCJpYXQiOjE2NzI2ODQyMDIsImp0aSI6ImFmZTUzNDk1NjQ5MzQ2NzE4ZWM3NTg4NzgzOTJmMTE0IiwidXNlcl9pZCI6MTB9.8A6K0qM7ifEqB7xS62cZ-UMTv5gB02VumwoXYZ43xuo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"IamTrueGigaChad@saiyans.com\",\r\n    \"password\" : \"Strength\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/profile/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"profile",
+						""
+					],
+					"query": [
+						{
+							"key": "Authorization",
+							"value": "Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyNjc4MTMzLCJpYXQiOjE2NzI2NzY5MzMsImp0aSI6ImJlZTMzNTAwZjdkYzRlM2ZiNThkMDI5NGVhMTU2NjFhIiwidXNlcl9pZCI6MTB9.bzQNEpjF495aLPRHbB493yiUFsyQCPZWV6ugzpL5sWw\"",
+							"disabled": true
+						},
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ImageGenerator",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcyNjg1NDAyLCJpYXQiOjE2NzI2ODQyMDIsImp0aSI6ImFmZTUzNDk1NjQ5MzQ2NzE4ZWM3NTg4NzgzOTJmMTE0IiwidXNlcl9pZCI6MTB9.8A6K0qM7ifEqB7xS62cZ-UMTv5gB02VumwoXYZ43xuo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/sakthi/Downloads/tester.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/image/?",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"image",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
